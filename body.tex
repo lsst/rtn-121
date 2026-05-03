@@ -13,7 +13,7 @@ Only a small amount of data -- relative to the future expected datasets -- had b
 
 \subsection{Early Science Program and Data Previews}
 
-Early science is defined as any science enabled by Rubin for its community prior to the first annual data release, Data Release 1 \citedsp{RTN-011}.
+Early science is defined as any science enabled by Rubin for its community prior to the first annual data release, Data Release 1 \cite{RTN-011}.
 It includes early alert production, incremental template generation, and the Data Previews based on commissioning and science validation data.
 As of May 2026 two Data Previews had been released:
 Data Preview 0 (DP0\footnote{\url{https://dp0.lsst.io/}}), based on simulated LSST-like images and catalogs,
@@ -26,7 +26,7 @@ The Rubin Science Platform (RSP\footnote{\url{https://rsp.lsst.io/}}) provides a
 It offers a JupyterLab python environment with the Rubin software installed and maintained; a Portal aspect with a graphical user interface for data exploration and visualization; and an API aspect for remote data access.
 A limited amount of storage space and compute resources are available to each account, with additional resources available through the Resource Allocation Committee \citep{RTN-084}.
 In this manuscript, the term "user" refers both generally to a user of the Rubin data products and also specifically users of the RSP.
-The RSP is available to Rubin data-rights holders only \citedsp{RDO-013}.
+The RSP is available to Rubin data-rights holders only \cite{RDO-013}.
 At the time of writing in May 2026, there were several thousand user accounts initiated in the RSP.
 
 \subsection{The Community Science Team (CST)}
@@ -45,7 +45,7 @@ These user profiles and use cases motivated the development of the Community Sci
 \subsection{The DP0 Delegates program}
 
 In 2021, at the time DP0 was released, RSP access was limited to 300 user accounts.
-Due to this limit imposing an application-and-selection process, the DP0 Delegates program was established \citedsp{RTN-004}.
+Due to this limit imposing an application-and-selection process, the DP0 Delegates program was established \cite{RTN-004}.
 The selection process prioritized inclusion, with the goal of assembling an early set of users who represented the diversity of the broader science community, who could provide useful feedback to Rubin and also share what they learned back with their communities (i.e., "seeding expertise").
 Delegates, in turn, benefited from early access and an accelerated learning experience.
 The program ended up being only slightly oversubscribed, and 300 additional user accounts were added yearly until the RSP could support open registration for any data-rights holder.
@@ -55,7 +55,7 @@ Early experiences serving the Delegates strongly motivated the development of th
 \section{Community Science Model}\label{sec:model}
 
 Providing user support at scale starts with preventing issues from needing staff attention in the first place, by providing sufficient documentation and learning resources, and by enabling peer-to-peer and crowd-sourced solutions.
-When issues do rise to the level of requiring staff intervention, the priority is to provide a positive user experience and a timely and consistent solution by following established internal workflows.
+When issues do rise to the level of requiring staff intervention, the priority is to provide a positive user experience and a timely solution by following established internal workflows.
 
 \subsection{Documentation}
 
@@ -69,30 +69,45 @@ All technical documentation adheres to the Rubin user documentation style guide\
 This design is also intended to keep detailed information easily discoverable.
 Metadata and schema (catalog column names and descriptions\footnote{\url{https://sdm-schemas.lsst.io/}}) are essential technical documentation, particularly important because they are delivered to users with the data itself, and are thus the most likely to be consulted.
 
-The two most challenging aspects of developing user-facing documentation for the Rubin data products are one,
-the LSST science pipelines \citep{10.71929/rubin/2570545} are still in active development and are constantly being improved,
-and two, the complexity of the image processing and cataloged measurements that the software produces.
-These challenges are mitigated by the documentation being open-source and version-controlled in GitHub,
-enabling all staff members to contribute.
+The two most challenging aspects of developing user-facing documentation for the Rubin data products are one, the LSST science pipelines \citep{10.71929/rubin/2570545} are still in active development and are constantly being improved, and two, the complexity of the image processing and cataloged measurements that the software produces.
+These challenges are mitigated by the documentation being open-source and version-controlled in GitHub, enabling all staff members to contribute.
 Keeping documentation accessible and up-to-date is an essential component of a scalable user support model.
 
 
 \subsection{Tutorials}
 
-Guidelines in RTN-045...
+Together with documentation, user-facing tutorials for the Rubin data products, services, and tools are effective at preventing questions and issues from requiring staff attention.
+They are also consistently the top-ranked resource in user feedback surveys.
 
+Rubin's guidelines and templates for user-facing tutorials are defined in \cite{RTN-045}.
+Tutorials for each of the RSP's three aspects, Notebook, Portal, and API, accompany each data release and are discoverable in the data release documentation\footnote{For example, for the DP1 tutorials see \url{https://dp1.lsst.io/tutorials}.}.
+A single DOI is made available for users to cite the entire tutorial set for all data releases: \cite{10.11578/rubin/dc.20250909.20}.
+Tutorial notebooks are also discoverable via a drop-down "Tutorials" menu in the Notebook Aspect.
+
+The tutorials are divided into three levels, as follows.
+
+\begin{itemize}
+\item 100 "How to": Short tutorials that demonstrate how to use a single RSP function or tool, without scientific context or motivation. Simple examples for quick reference.
+\item 200 "Data products": One tutorial per data product type (e.g., image subtype, catalog) that describes the product; its format, metadata, and key columns; and demonstrates how to access it.
+\item 300 "Science demos": Longer tutorials the demonstrate end-to-end scientific analyses that use multiple RSP tools and data products in sequence, describing key concepts and providing scientific context and motivation for which datasets and tools are used.
+\end{itemize}
+
+The code in tutorials adheres to the Rubin developer's guide, and the narrative text follows industry best practices of writing unambiguous instructional statements in the imperative mood.
+All tutorials follow the same format and are kept short enough that their name (title) accurately represents their contents, improving information discoverability and the tutorials' use as a reference resource.
+
+The development and maintenance of tutorials shares the same challenges as documentation, and are also essential for a scalable user support model for the same reasons.
 
 
 \subsection{Learning opportunities}
 
 Live interactive learning opportunities, both virtual and in-person, have the dual benefits of educating and engaging users.
 
-\begin{enumerate}
-\item Rubin Science Assemblies (weekly, virtual): Held Thursday mornings, the weeks alternate between practical, hands-on tutorials and open drop-in "office hour" sessions for live user support.
-\item Rubin Data Academy (annual, virtual): Typically the week after the summer meeting of the American Astronomical Society, with multiple sessions a day serving global timezones. A week of interactive tutorials and networking sessions to provide an accelerated learning experience for anyone, but especially summer students starting Rubin projects. 
-\item Rubin Community Workshop (annual, hybrid): Held in the middle of northern summer to bring together Rubin users and staff for a week of invited and contributed scientific presentations and discussion.
-\item Support for regional/topical meetings and custom seminars: The CST aims to fulfill all user requests for talks and tutorials or find an available Rubin staff member. Resources are limited, with preference given to small and underserved institutes and virtual talk requests. When Rubin staff travel they're encouraged (and supported by the CST) to give talks and tutorials at local institutes.
-\end{enumerate}
+\begin{itemize}
+\item \textbf{Rubin Science Assemblies (weekly, virtual)}: Held Thursday mornings, the weeks alternate between practical, hands-on tutorials and open drop-in "office hour" sessions for live user support.
+\item \textbf{Rubin Data Academy (annual, virtual)}: Typically the week after the summer meeting of the American Astronomical Society, with multiple sessions a day serving global time zones. A week of interactive tutorials and networking sessions to provide an accelerated learning experience for anyone, but especially summer students starting Rubin projects. 
+\item \textbf{Rubin Community Workshop (annual, hybrid)}: Held in the middle of northern summer to bring together Rubin users and staff for a week of invited and contributed scientific presentations and discussion.
+\item \textbf{Support for regional/topical meetings and custom seminars}: The CST aims to fulfill all user requests for talks and tutorials or find an available Rubin staff member. Resources are limited, with preference given to small and under-served institutes and virtual talk requests. When Rubin staff travel they're encouraged (and supported by the CST) to give talks and tutorials at local institutes.
+\end{itemize}
 
 Virtual events scale easily to hundreds of participants following along with presentations and tutorials, and the ease of recording and hosting videos in, e.g., YouTube, extends the reach even further.
 
