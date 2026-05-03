@@ -13,18 +13,18 @@ Only a small amount of data -- relative to the future expected datasets -- had b
 
 \subsection{Early Science Program and Data Previews}
 
-Early science is defined as any science enabled by Rubin for its community prior to the first annual data release, Data Release 1 \cite{RTN-011}.
+Early science is defined as any science enabled by Rubin for its community prior to the first annual data release, Data Release 1 \citeds{RTN-011}.
 It includes early alert production, incremental template generation, and the Data Previews based on commissioning and science validation data.
 As of May 2026 two Data Previews had been released:
 Data Preview 0 (DP0\footnote{\url{https://dp0.lsst.io/}}), based on simulated LSST-like images and catalogs,
-and Data Preview 1 (DP1\footnote{\url{https://dp1.lsst.io/}}), based on observations with the LSST Commissioning Camera \citep{2026arXiv260323786V}.
+and Data Preview 1 (DP1\footnote{\url{https://dp1.lsst.io/}}), based on observations with the LSST Commissioning Camera \cite{2026arXiv260323786V}.
 Alerts had started streaming to brokers as of February 2026, with the release of Prompt Products and Data Preview 2 (DPS) from the LSST Camera expected later in 2026.
 
 \subsection{Rubin Science Platform (RSP)}
 
-The Rubin Science Platform (RSP\footnote{\url{https://rsp.lsst.io/}}) provides authenticated access to the LSST data products, tools, and services \citep{LSE-319, LDM-542, 2024ASPC..535..227O}.
+The Rubin Science Platform (RSP\footnote{\url{https://rsp.lsst.io/}}) provides authenticated access to the LSST data products, tools, and services \cite{LSE-319, LDM-542, 2024ASPC..535..227O}.
 It offers a JupyterLab python environment with the Rubin software installed and maintained; a Portal aspect with a graphical user interface for data exploration and visualization; and an API aspect for remote data access.
-A limited amount of storage space and compute resources are available to each account, with additional resources available through the Resource Allocation Committee \citep{RTN-084}.
+A limited amount of storage space and compute resources are available to each account, with additional resources available through the Resource Allocation Committee \cite{RTN-084}.
 In this manuscript, the term "user" refers both generally to a user of the Rubin data products and also specifically users of the RSP.
 The RSP is available to Rubin data-rights holders only \cite{RDO-013}.
 At the time of writing in May 2026, there were several thousand user accounts initiated in the RSP.
@@ -37,7 +37,7 @@ The CST is responsible for developing and implementing the Community Science Mod
 
 \subsection{Use cases and user profiles}
 
-The development of Rubin's Community Science Model began with defining the RSP user profiles and use cases that the model would serve \citep{RTN-002}.
+The development of Rubin's Community Science Model began with defining the RSP user profiles and use cases that the model would serve \cite{RTN-002}.
 User profiles include students, professional scientists (the occasional, moderate, and heavy user), and users with disabilities (e.g., blind, deaf, and neurodivergent users).
 The use cases are specific examples of simple to advanced analyses that any user might need to do with the RSP, involving data query, retrieval, visualization, and analysis.
 These user profiles and use cases motivated the development of the Community Science Model.
@@ -69,7 +69,7 @@ All technical documentation adheres to the Rubin user documentation style guide\
 This design is also intended to keep detailed information easily discoverable.
 Metadata and schema (catalog column names and descriptions\footnote{\url{https://sdm-schemas.lsst.io/}}) are essential technical documentation, particularly important because they are delivered to users with the data itself, and are thus the most likely to be consulted.
 
-The two most challenging aspects of developing user-facing documentation for the Rubin data products are one, the LSST science pipelines \citep{10.71929/rubin/2570545} are still in active development and are constantly being improved, and two, the complexity of the image processing and cataloged measurements that the software produces.
+The two most challenging aspects of developing user-facing documentation for the Rubin data products are one, the LSST science pipelines \cite{10.71929/rubin/2570545} are still in active development and are constantly being improved, and two, the complexity of the image processing and cataloged measurements that the software produces.
 These challenges are mitigated by the documentation being open-source and version-controlled in GitHub, enabling all staff members to contribute.
 Keeping documentation accessible and up-to-date is an essential component of a scalable user support model.
 
