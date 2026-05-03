@@ -17,10 +17,10 @@ Early science is defined as any science enabled by Rubin for its community prior
 It includes early alert production, incremental template generation, and the Data Previews based on commissioning and science validation data.
 As of May 2026 two Data Previews had been released:
 Data Preview 0 (DP0\footnote{\url{https://dp0.lsst.io/}}), based on simulated LSST-like images and catalogs,
-and Data Preview 1 \citep[DP1\footnote{\url{https://dp1.lsst.io/}}][]{2026arXiv260323786V}, based on observations with the LSST Commissioning Camera.
+and Data Preview 1 (DP1\footnote{\url{https://dp1.lsst.io/}}), based on observations with the LSST Commissioning Camera \citep{2026arXiv260323786V}.
 Alerts had started streaming to brokers as of February 2026, with the release of Prompt Products and Data Preview 2 (DPS) from the LSST Camera expected later in 2026.
 
-\subsection{The Rubin Science Platform (RSP)}
+\subsection{Rubin Science Platform (RSP)}
 
 The Rubin Science Platform (RSP\footnote{\url{https://rsp.lsst.io/}}) provides authenticated access to the LSST data products, tools, and services \citep{LSE-319, LDM-542, 2024ASPC..535..227O}.
 It offers a JupyterLab python environment with the Rubin software installed and maintained; a Portal aspect with a graphical user interface for data exploration and visualization; and an API aspect for remote data access.
@@ -29,7 +29,7 @@ In this manuscript, the term "user" refers both generally to a user of the Rubin
 The RSP is available to Rubin data-rights holders only \cite{RDO-013}.
 At the time of writing in May 2026, there were several thousand user accounts initiated in the RSP.
 
-\subsection{The Community Science Team (CST)}
+\subsection{Community Science Team (CST)}
 
 Situated within the Data Management department, the CST is composed of $\sim$10 staff members, each at 0.5 to 1.0 full-time equivalent (FTE) hours.
 They are a mix of postdoctoral fellows and junior and senior research staff, with research expertise across the Rubin science pillars: understanding the nature of dark matter and dark energy; taking an inventory of the Solar System; mapping the Milky Way; and exploring variable and transient phenomena.
@@ -42,7 +42,7 @@ User profiles include students, professional scientists (the occasional, moderat
 The use cases are specific examples of simple to advanced analyses that any user might need to do with the RSP, involving data query, retrieval, visualization, and analysis.
 These user profiles and use cases motivated the development of the Community Science Model.
 
-\subsection{The DP0 Delegates program}
+\subsection{DP0 Delegates program}
 
 In 2021, at the time DP0 was released, RSP access was limited to 300 user accounts.
 Due to this limit imposing an application-and-selection process, the DP0 Delegates program was established \cite{RTN-004}.
@@ -112,25 +112,45 @@ Live interactive learning opportunities, both virtual and in-person, have the du
 Virtual events scale easily to hundreds of participants following along with presentations and tutorials, and the ease of recording and hosting videos in, e.g., YouTube, extends the reach even further.
 
 
-\subsection{User support and issue resolution}
+\subsection{Issue resolution}
 
-Guidelines for Forum RTN-097
+The Rubin Community Forum\footnote{\url{https://community.lsst.org/} is the primary venue for user support, and can be thought of as a modern "helpdesk".
+Anyone may create an account and post new topics in order to ask a question in the Support category (data rights are not required).
+At the time this manuscript was prepared, three alert brokers (ALeRCE, Fink, and Lasair) and the UK's independent data access center (IDAC) were also using the Forum to support their users.
+
+A traditional, closed help desk won’t scale well to the anticipated 10000 users, but the Forum -- which is built on Discourse\footnote{\url{https://www.discourse.org/}} -- enables self-help (users can search for similar questions) and crowd-sourced solutions (anyone may chime in with answers), while also providing the capabilities for Rubin staff to moderate posts and follow-up on unsolved issues.
+
+Guidelines for providing user support and resolving issues that arise in the Rubin Community Forum are detailed in \cite{RTN-097}.
+These guidelines are designed to achieve two main goals: for every topic to get a marked solution, and for every user to have a positive experience.
+One CST member serves as "Forum Watcher" every week, and they are responsible for ensuring a first response is posted within 24 hours; coordinating internal expertise when work is required to resolve an issue; and verifying that a solution is marked for every Support category topic.
+The guidelines also describe the principles of effective user support as responses that are prompt, direct, validated, inclusive, and referenced.
+
+Such a highly engaged level of Forum moderation from Rubin staff at this early time is essential to building both the content- and crowd-base of the Forum which will, in the future years, scale in a sustainable way to thousands of users.
 
 
 \subsection{Accessibility}
 
-External accessibility reviews...
+The ultimate goal is a Community Science Model and a Rubin Science Platform that are truly accessible by everyone in the global Rubin data-rights holders community.
+The following initiatives have been done in support of this goal.
 
-Colorblind-friendly filter palette... x-rubin effort.
+\begin{itemize}
+\item A first external accessibility review of the RSP was led by the Instituto de Bioingenier\'{i}a at the University of Mendoza with a focus group of Blind and Low Vision (BLV) users. Their recommendations -- which are currently being implemented -- are available in \cite{casado_2026_18262310}.
+\item A colorblind-friendly filter palette to represent the six LSST filters, $ugrizy$, has been adopted after internal discussions that prioritized feedback from staff with different types of colorblindness. The current hex codes are embedded in the Rubin code base and also listed in \cite{RTN-045}.
+\item A program to support science at small and underserved institutes (SUI) has been underway since DP0, with two main facets: offering one-on-one custom onboarding sessions and RCW travel funding to faculty and students at SUIs.
+\item Translations of key tutorials into Spanish (and in particular, Chilean Spanish) has been executed for both DP0 and DP1 by the Argentinian in-kind contribution team.
+\end{itemize}
 
-Supporting science at small and underserved institutes...
+One area of accessibility that has been raised in user feedback is that much of the documentation and materials are inaccessible to a undergraduate students that are just starting out with research in astronomy.
+While the expectation is that most students will have research advisors that can fill in the basics for them, the "unsupervised student" is one of the user profiles considered in \cite{RTN-002}.
+Such basic materials are not entirely beyond the model's scope and are discussed in Section \ref{sec:future}.
 
-Translations...
 
 \subsection{Supporting the LSST Science Collaborations}
 
-Helping the helpers, training the trainers.
-Liaison program.
+The eight LSST Science Collaborations\footnote{\url{https://rubinobservatory.org/for-scientists/science-collaborations}} are independent communities of scientists and students, self-organized into collaborations based on their research interests.
+They support their members to do science with Rubin's LSST, and in turn, Rubin staff support them.
+For example, CST members prioritize requests for custom tutorials, or talks at Science Collaboration meetings.
+Rubin staff engage with the Science Collaborations by serving as Liaisons \cite{RTN-118}: points of contact and advocates who serve as two-way conduits for information to and from the SCs.
 
 
 \section{Performance}\label{sec:performance}
@@ -153,6 +173,10 @@ Users Committee...
 \section{Future Work}\label{sec:future}
 
 AI, rubin bot, integrations
+
+Sonification
+
+A supporting package 
 
 More short video tutorials, especially for the Portal.
 
