@@ -106,6 +106,7 @@ Live interactive learning opportunities, both virtual and in-person, have the du
 \item \textbf{Rubin Science Assemblies (weekly, virtual)}: Held Thursday mornings, the weeks alternate between practical, hands-on tutorials and open drop-in "office hour" sessions for live user support.
 \item \textbf{Rubin Data Academy (annual, virtual)}: Typically the week after the summer meeting of the American Astronomical Society, with multiple sessions a day serving global time zones. A week of interactive tutorials and networking sessions to provide an accelerated learning experience for anyone, but especially summer students starting Rubin projects. 
 \item \textbf{Rubin Community Workshop (annual, hybrid)}: Held in the middle of northern summer to bring together Rubin users and staff for a week of invited and contributed scientific presentations and discussion.
+\item \textbf{AAS Workshop}: For the first time at the winter meeting of the American Astronomical Society in 2026, Rubin staff ran a full-day Sunday workshop on DP1 and the RSP, with about 40 participants. The plan is to continue these in the future. 
 \item \textbf{Support for regional/topical meetings and custom seminars}: The CST aims to fulfill all user requests for talks and tutorials or find an available Rubin staff member. Resources are limited, with preference given to small and under-served institutes and virtual talk requests. When Rubin staff travel they're encouraged (and supported by the CST) to give talks and tutorials at local institutes.
 \end{itemize}
 
@@ -114,11 +115,11 @@ Virtual events scale easily to hundreds of participants following along with pre
 
 \subsection{Issue resolution}
 
-The Rubin Community Forum\footnote{\url{https://community.lsst.org/} is the primary venue for user support, and can be thought of as a modern "helpdesk".
+The Rubin Community Forum\footnote{\url{https://community.lsst.org/}} is the primary venue for user support, and can be thought of as a modern "helpdesk".
 Anyone may create an account and post new topics in order to ask a question in the Support category (data rights are not required).
-At the time this manuscript was prepared, three alert brokers (ALeRCE, Fink, and Lasair) and the UK's independent data access center (IDAC) were also using the Forum to support their users.
+At the time this manuscript was prepared, three alert brokers (ALeRCE, Fink, and Lasair) and the UK's independent data access center (IDAC \cite{RTN-003}) were also using the Forum to support their users.
 
-A traditional, closed help desk won’t scale well to the anticipated 10000 users, but the Forum -- which is built on Discourse\footnote{\url{https://www.discourse.org/}} -- enables self-help (users can search for similar questions) and crowd-sourced solutions (anyone may chime in with answers), while also providing the capabilities for Rubin staff to moderate posts and follow-up on unsolved issues.
+A traditional, closed help desk will not scale well to the anticipated 10000 users, but the Forum -- which is built on Discourse\footnote{\url{https://www.discourse.org/}} -- enables self-help (users can search for similar questions) and crowd-sourced solutions (anyone may chime in with answers), while also providing the capabilities for Rubin staff to moderate posts and follow-up on unsolved issues.
 
 Guidelines for providing user support and resolving issues that arise in the Rubin Community Forum are detailed in \cite{RTN-097}.
 These guidelines are designed to achieve two main goals: for every topic to get a marked solution, and for every user to have a positive experience.
@@ -140,9 +141,8 @@ The following initiatives have been done in support of this goal.
 \item Translations of key tutorials into Spanish (and in particular, Chilean Spanish) has been executed for both DP0 and DP1 by the Argentinian in-kind contribution team.
 \end{itemize}
 
-One area of accessibility that has been raised in user feedback is that much of the documentation and materials are inaccessible to a undergraduate students that are just starting out with research in astronomy.
-While the expectation is that most students will have research advisors that can fill in the basics for them, the "unsupervised student" is one of the user profiles considered in \cite{RTN-002}.
-Such basic materials are not entirely beyond the model's scope and are discussed in Section \ref{sec:future}.
+One area of accessibility that has been raised in user feedback is that much of the documentation and materials are too advanced for undergraduate students that are just starting out with research in astronomy.
+While the expectation is that most students will have research advisors that can fill in the basics for them, the "unsupervised student" is one of the user profiles considered in \cite{RTN-002}, so such basic materials are not entirely beyond the model's scope and are discussed in Section \ref{sec:future}.
 
 
 \subsection{Supporting the LSST Science Collaborations}
@@ -155,18 +155,42 @@ Rubin staff engage with the Science Collaborations by serving as Liaisons \cite{
 
 \section{Performance}\label{sec:performance}
 
-Metrics remain a challenge.
-Got number of papers, number of users, but... 
+Metrics to assess the performance of the community science model -- essentially, how the model is working "in the wild" -- remain in development.
 
-The SciX library and tech note...
+\begin{itemize}
+\item The number of scientific publications based on Rubin data is tracked in a SciX library\footnote{\url{https://scixplorer.org/public-libraries/QQ9rNp-QSZqea5vG6zESUQ}}\cite{RTN-113}. As of May 2026, 34 papers had been added to the library, mostly based on the DP1 data release in June 2025. As a group these papers had been cited 144 times (53 times from within the group).
+\item Attendance at live virtual events is tracked internally. The Rubin Community Workshop typically reaches maximum capacity of 250 in-person, plus an equivalent number if virtual registrants. The Rubin Data Academy on order of $\sim$250 participants; and the weekly Rubin Science Assemblies attract between 15 and 80 attendees depending on the topic.
+\item The engagement, response time, and solve rates for the Rubin Community Forum since before the first data release at the end of June 2021 are shown in Figures \ref{fig:forum-performance-engagement} to \ref{fig:forum-performance-topics}.
+\end{itemize}
 
-Annual reports...
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/Forum_performance_daily_engaged_users.png}
+    \caption{Monthly average number of daily engaged users in the Rubin Community Forum over time, with data release dates marked. An "engaged user" is one who has posted or "liked" a post. The plot shows that data releases drive engagement, and that engagement has not decreased post-DP1 to pre-DP1 rates.}
+    \label{fig:forum-performance-engagement}
+\end{figure}
 
-Forum status ... 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/Forum_performance_time_to_first_response.png}
+    \caption{Average time to first response for new topics in the Support category of the Rubin Community Forum over time, with data release dates marked. The plot shows that the time to first response has, with the exception of Oct 2024, been less than 24 hours due to the implementation of Forum Watchers.}
+    \label{fig:forum-performance-response}
+\end{figure}
 
-User surveys...
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/Forum_performance_topics_and_solutions.png}
+    \caption{Monthly average number of new topics (top) and marked solutions (bottom) in the Support category of the Rubin Community Forum over time, with data release dates marked. As with the engagement metric in Figure \ref{fig:forum-performance-engagement}, new Support topics and solutions are driven by data releases. The rate of solutions can be seen to lag behind the rate of new topics, but that is expected as full issue resolution can take time.}
+    \label{fig:forum-performance-topics}
+\end{figure}
 
-Users Committee...
+
+
+\subsection{Feedback}
+
+User surveys. Would have to go back to DP0.
+
+Users Committee.
 
 
 
