@@ -16,13 +16,13 @@ Only a small amount of data -- relative to the future expected datasets -- had b
 Early science is defined as any science enabled by Rubin for its community prior to the first annual data release, Data Release 1 \cite{RTN-011}.
 It includes early alert production, incremental template generation, and the Data Previews based on commissioning and science validation data.
 As of May 2026 two Data Previews had been released:
-Data Preview 0 (DP0\footnote{\url{https://dp0.lsst.io/}}), based on simulated LSST-like images and catalogs,
-and Data Preview 1 (DP1\footnote{\url{https://dp1.lsst.io/}}), based on observations with the LSST Commissioning Camera \cite{2026arXiv260323786V}.
+Data Preview 0 (DP0), based on simulated LSST-like images and catalogs,
+and Data Preview 1 (DP1) \cite{2026arXiv260323786V}, based on observations with the LSST Commissioning Camera.
 Alerts had started streaming to brokers as of February 2026, with the release of Prompt Products and Data Preview 2 (DPS) from the LSST Camera expected later in 2026.
 
 \subsection{Rubin Science Platform (RSP)}
 
-The Rubin Science Platform (RSP\footnote{\url{https://rsp.lsst.io/}}) provides authenticated access to the LSST data products, tools, and services \cite{LSE-319, LDM-542, 2024ASPC..535..227O}.
+The Rubin Science Platform (RSP) provides authenticated access to the LSST data products, tools, and services \cite{LSE-319, LDM-542, 2024ASPC..535..227O}.
 It offers a JupyterLab python environment with the Rubin software installed and maintained; a Portal aspect with a graphical user interface for data exploration and visualization; and an API aspect for remote data access.
 A limited amount of storage space and compute resources are available to each account, with additional resources available through the Resource Allocation Committee \cite{RTN-084}.
 In this manuscript, the term "user" refers both generally to a user of the Rubin data products and also specifically users of the RSP.
@@ -65,9 +65,9 @@ This keeps the menu easily navigable and information discoverable.
 Content pages are high-level descriptions that link users to technical documentation, and typically end in a link to the Rubin Community Forum.
 
 Technical documentation, which includes data release documentation websites and Rubin Tech Notes, is served from  \url{https://www.lsst.io/}.
-All technical documentation adheres to the Rubin user documentation style guide\footnote{\url{https://developer.lsst.io/user-docs/index.html}} which follows the industry practice of topic-based writing ("every page is page one").
+All technical documentation adheres to the Rubin user documentation style guide\footnote{\url{https://developer.lsst.io/user-docs}} which follows the industry practice of topic-based writing ("every page is page one").
 This design is also intended to keep detailed information easily discoverable.
-Metadata and schema (catalog column names and descriptions\footnote{\url{https://sdm-schemas.lsst.io/}}) are essential technical documentation, particularly important because they are delivered to users with the data itself, and are thus the most likely to be consulted.
+Metadata and schema (catalog column names and descriptions) are essential technical documentation, particularly important because they are delivered to users with the data itself, and are thus the most likely to be consulted.
 
 The two most challenging aspects of developing user-facing documentation for the Rubin data products are one, the LSST science pipelines \cite{10.71929/rubin/2570545} are still in active development and are constantly being improved, and two, the complexity of the image processing and cataloged measurements that the software produces.
 These challenges are mitigated by the documentation being open-source and version-controlled in GitHub, enabling all staff members to contribute.
@@ -80,7 +80,7 @@ Together with documentation, user-facing tutorials for the Rubin data products, 
 They are also consistently the top-ranked resource in user feedback surveys.
 
 Rubin's guidelines and templates for user-facing tutorials are defined in \cite{RTN-045}.
-Tutorials for each of the RSP's three aspects, Notebook, Portal, and API, accompany each data release and are discoverable in the data release documentation\footnote{For example, for the DP1 tutorials see \url{https://dp1.lsst.io/tutorials}.}.
+Tutorials for each of the RSP's three aspects, Notebook, Portal, and API, accompany each data release and are discoverable in the data release documentation.
 A single DOI is made available for users to cite the entire tutorial set for all data releases: \cite{10.11578/rubin/dc.20250909.20}.
 Tutorial notebooks are also discoverable via a drop-down "Tutorials" menu in the Notebook Aspect.
 
@@ -115,11 +115,11 @@ Virtual events scale easily to hundreds of participants following along with pre
 
 \subsection{Issue resolution}
 
-The Rubin Community Forum\footnote{\url{https://community.lsst.org/}} is the primary venue for user support, and can be thought of as a modern "helpdesk".
+The Rubin Community Forum (\url{https://community.lsst.org/}) is the primary venue for user support, and can be thought of as a modern "helpdesk".
 Anyone may create an account and post new topics in order to ask a question in the Support category (data rights are not required).
 At the time this manuscript was prepared, three alert brokers (ALeRCE, Fink, and Lasair) and the UK's independent data access center (IDAC \cite{RTN-003}) were also using the Forum to support their users.
 
-A traditional, closed help desk will not scale well to the anticipated 10000 users, but the Forum -- which is built on Discourse\footnote{\url{https://www.discourse.org/}} -- enables self-help (users can search for similar questions) and crowd-sourced solutions (anyone may chime in with answers), while also providing the capabilities for Rubin staff to moderate posts and follow-up on unsolved issues.
+A traditional, closed help desk will not scale well to the anticipated 10000 users, but the Forum -- which is built on the Discourse platform -- enables self-help (users can search for similar questions) and crowd-sourced solutions (anyone may chime in with answers), while also providing the capabilities for Rubin staff to moderate posts and follow-up on unsolved issues.
 
 Guidelines for providing user support and resolving issues that arise in the Rubin Community Forum are detailed in \cite{RTN-097}.
 These guidelines are designed to achieve two main goals: for every topic to get a marked solution, and for every user to have a positive experience.
@@ -147,7 +147,7 @@ While the expectation is that most students will have research advisors that can
 
 \subsection{Supporting the LSST Science Collaborations}
 
-The eight LSST Science Collaborations\footnote{\url{https://rubinobservatory.org/for-scientists/science-collaborations}} are independent communities of scientists and students, self-organized into collaborations based on their research interests.
+The eight LSST Science Collaborations are independent communities of scientists and students, self-organized into collaborations based on their research interests.
 They support their members to do science with Rubin's LSST, and in turn, Rubin staff support them.
 For example, CST members prioritize requests for custom tutorials, or talks at Science Collaboration meetings.
 Rubin staff engage with the Science Collaborations by serving as Liaisons \cite{RTN-118}: points of contact and advocates who serve as two-way conduits for information to and from the SCs.
@@ -188,9 +188,13 @@ Metrics to assess the performance of the community science model -- essentially,
 
 \subsection{Feedback}
 
-User surveys. Would have to go back to DP0.
+To improve model performance, feedback is ingested and improvements are made to each component on a regular basis.
 
-Users Committee.
+The primary venue for feedback is the Rubin Users Committee \cite{RDO-051}.
+
+Another active venue for feedback is the Rubin Community Forum; the questions asked and issues reported are turned into work tickets for the CST.
+Occasionally, feedback is also taken via user surveys (e.g., the DP0 Delegates were surveyed on their experience) and via focus groups, and has revealed gaps in the documentation or ideas for new science demonstration tutorials.
+
 
 
 
