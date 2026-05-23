@@ -1,14 +1,14 @@
 \section{Introduction}
 
 The data products from NSF-DOE Vera C. Rubin Observatory (funded by the U.S. National Science Foundation and the U.S. Department of Energy's Office of Science) and its Legacy Survey of Space and Time (LSST \cite{2019ApJ...873..111I}) are expected to be accessed and analyzed by ten thousand scientists and students worldwide.
-Supporting this large and diverse community to access the novel LSST data set requires an innovative and proactive community science model.
+Supporting this large and diverse community to access the novel LSST data set requires an innovative and proactive model for community science.
 This paper provides an overview of the Rubin Observatory's community science model, including policies, guidelines, and workflows for documentation, tutorials, activities, user support, and issue resolution.
-An evaluation of the model's current implementation and how these components are working "in the wild", with an eye towards the challenges of scaling up while maintaining inclusion and access and deriving metrics for scientific performance, are also included.
+An evaluation of the model's current implementation and how these components are working ``in the wild,'' with an eye towards the challenges of scaling up while maintaining inclusion and access and deriving metrics for scientific performance, are also included.
 
 
 \section{Context}\label{sec:context}
 
-At the time this manuscript was prepared in May 2026, Rubin was in its "Early Science" era.
+At the time this manuscript was prepared in May 2026, Rubin was in its ``Early Science'' era.
 Only a small amount of data -- relative to the future expected datasets -- had been released.
 
 \subsection{Early Science Program and Data Previews}
@@ -18,27 +18,28 @@ It includes early alert production, incremental template generation, and the Dat
 As of May 2026 two Data Previews have been released:
 Data Preview 0 (DP0), based on simulated LSST-like images and catalogs,
 and Data Preview 1 (DP1) \cite{10.71929/rubin/2570308}, based on observations with the LSST Commissioning Camera.
-Alerts have started streaming to brokers as of February 2026, with the release of Prompt Products and Data Preview 2 (DP2) from the LSST Camera expected later in 2026.
+Alerts have started streaming to brokers\footnote{Alert brokers are independent software systems that ingest and process astronomical alerts from the LSST and other surveys, and serve them to the scientific community.} as of February 2026, with the release of Prompt Products and Data Preview 2 (DP2) from the LSST Camera expected later in 2026.
 
 \subsection{Rubin Science Platform (RSP)}
 
 The Rubin Science Platform (RSP) provides authenticated access to the LSST data products, tools, and services \cite{LSE-319, LDM-542, 2024ASPC..535..227O}.
-It offers a JupyterLab python environment with the Rubin software installed and maintained; a Portal aspect with a graphical user interface for data exploration and visualization; and an API aspect for programmatic data access.
+It offers a JupyterLab python environment with the Rubin software installed and maintained, a Portal aspect with a graphical user interface for data exploration and visualization, and an API aspect for programmatic data access.
 A limited amount of storage space and compute resources are available to each user account, with additional resources available through the Resource Allocation Committee \cite{RTN-084}.
-In this manuscript, the term "user" refers both generally to a user of the Rubin data products and also specifically users of the RSP.
+In this manuscript, the term ``user'' refers both generally to a user of the Rubin data products and also specifically users of the RSP.
 The RSP is available to Rubin data-rights holders only \cite{RDO-013}.
 At the time of writing in May 2026, there were several thousand user accounts provisioned in the RSP.
 
 \subsection{Community Science Team (CST)}
 
 Situated within the Data Management department, the CST is composed of $\sim$10 staff members, each at 0.5 to 1.0 full-time equivalent (FTE) hours.
-They are a mix of postdoctoral fellows and junior and senior research staff, with research expertise across the Rubin science pillars: understanding the nature of dark matter and dark energy; taking an inventory of the Solar System; mapping the Milky Way; and exploring variable and transient phenomena.
-The CST is responsible for developing and implementing the Community Science Model, creating tutorials and documentation to guide the community in working with Rubin data products and services, and for moderating the Rubin Community Forum (see Sec.~\ref{sec:issue_resolution}) and managing user support requests.
+They are a mix of postdoctoral fellows and junior and senior research staff, with research expertise across the Rubin science pillars: understanding the nature of dark matter and dark energy, taking an inventory of the Solar System, mapping the Milky Way, and exploring variable and transient phenomena.
+The CST is responsible for developing and implementing the Rubin Community Science Model, creating tutorials and documentation to guide the community in working with Rubin data products and services, and for moderating the Rubin Community Forum (see Sec.~\ref{sec:issue_resolution}) and managing user support requests.
 
 \subsection{Use cases and user profiles}
 
 The development of Rubin's Community Science Model began with defining the RSP user profiles and use cases that the model would serve \cite{RTN-002}.
-User profiles include students, professional scientists (the occasional, moderate, and heavy user), and users with disabilities (e.g., blind, deaf, and neurodivergent users).
+User profiles include students and professional scientists at various career stages (the occasional, moderate, and heavy user).
+Orthogonal to this, users with a range of disabilities (e.g., blind, deaf, and neurodivergent users) were also considered.
 The use cases are specific examples of simple to advanced analyses that any user might need to do with the RSP, involving data query, retrieval, visualization, and analysis.
 These user profiles and use cases motivated the development of the Community Science Model.
 
@@ -46,7 +47,7 @@ These user profiles and use cases motivated the development of the Community Sci
 
 In 2021, at the time DP0 was released, RSP access was limited to 300 user accounts as the system was still in early development during Rubin's construction phase and could not yet technically support the entire community.
 This limit necessitated an application-and-selection process leading to the establishment of  the DP0 Delegates program \cite{RTN-004}.
-The selection process prioritized inclusion, with the goal of assembling an early set of users who represented the diversity of the broader science community, who could provide useful feedback to Rubin and also share what they learned within their communities (i.e., "seeding expertise").
+The selection process prioritized inclusion, with the goal of assembling an early set of users who represented the diversity of the broader science community, who could provide useful feedback to Rubin and also share what they learned within their communities (i.e., ``seeding expertise'').
 Delegates, in turn, benefited from early access and an accelerated learning experience.
 The program ultimately was  only slightly oversubscribed, and 300 additional user accounts were added yearly until the RSP could support open registration for any data-rights holder.
 Early experiences serving the Delegates strongly motivated the development of the Community Science Model.
@@ -60,12 +61,12 @@ When issues do rise to the level of requiring staff intervention, the priority i
 \subsection{Documentation}
 
 The Rubin Observatory For Scientists website\footnote{\url{https://rubinobservatory.org/for-scientists}} is designed as the first point of contact.
-The page hierarchy is "shallow", with only three layers: the main landing page, "hub" topical pages, and "content" pages.
+The page hierarchy is designed to be ``shallow,'' with only three layers: the main landing page, ``hub'' topical pages, and ``content'' pages.
 This keeps the menu easily navigable and information discoverable.
-Content pages are high-level descriptions that link users to technical documentation, and typically end in a link to the Rubin Community Forum.
+Content pages are high-level descriptions that link users to technical documentation, and typically end in a link to the Rubin Community Forum (see Sec.~\ref{sec:issue_resolution} below).
 
 Technical documentation, which includes data release documentation websites and Rubin Tech Notes, is served from  \url{https://www.lsst.io/}.
-All technical documentation adheres to the Rubin user documentation style guide\footnote{\url{https://developer.lsst.io/user-docs}} which follows the industry practice of topic-based writing ("every page is page one").
+All technical documentation adheres to the Rubin user documentation style guide\footnote{\url{https://developer.lsst.io/user-docs}} which follows the industry practice of topic-based writing (``every page is page one'').
 This design is also intended to keep detailed information easily discoverable.
 Metadata and schema (catalog column names and descriptions) are essential technical documentation, particularly important because they are delivered to users with the data itself, and are thus the most likely to be consulted.
 
@@ -82,14 +83,14 @@ They are also consistently the top-ranked resource in user feedback surveys.
 Rubin's guidelines and templates for user-facing tutorials are defined in RTN-045 \cite{RTN-045}.
 Tutorials for each of the RSP's three aspects, Notebook, Portal, and API, accompany each data release and are discoverable in the data release documentation.
 A single DOI is made available for users to cite the entire tutorial set for all data releases \cite{10.11578/rubin/dc.20250909.20}.
-Tutorial notebooks are also discoverable via a drop-down "Tutorials" menu in the Notebook Aspect.
+Tutorial notebooks are also discoverable via a drop-down ``Tutorials'' menu in the Notebook Aspect.
 
 The tutorials are divided into three levels, as follows.
 
 \begin{itemize}
-\item 100 "How to": Short tutorials that demonstrate how to use a single RSP function or tool, without scientific context or motivation. Simple examples for quick reference.
-\item 200 "Data products": One tutorial per data product type (e.g., image subtype, catalog) that describes the product; its format, metadata, and key columns; and demonstrates how to access it.
-\item 300 "Science demos": Longer tutorials that demonstrate end-to-end scientific analyses using multiple RSP tools and data products in sequence, describing key concepts and providing scientific context and motivation for which datasets and tools are used.
+\item 100 ``How to:'' Short tutorials that demonstrate how to use a single RSP function or tool, without scientific context or motivation. These are simple examples for quick reference.
+\item 200 ``Data products:'' One tutorial per data product type (e.g., image subtype, catalog) that describes the product (its format, metadata, and key columns) and demonstrates how to access it.
+\item 300 ``Science demos:'' Longer tutorials that demonstrate end-to-end scientific analyses using multiple RSP tools and data products in sequence, describing key concepts and providing scientific context and motivation for which datasets and tools are used.
 \end{itemize}
 
 The code in tutorials adheres to the Rubin developer's guide,\footnote{\url{https://developer.lsst.io/}} and the narrative text follows industry best practices of writing unambiguous instructional statements in the imperative mood.
@@ -103,7 +104,7 @@ The development and maintenance of tutorials shares the same challenges as docum
 Live interactive learning opportunities, both virtual and in-person, have the dual benefits of educating and engaging users.
 
 \begin{itemize}
-\item \textbf{Rubin Science Assemblies (weekly, virtual)}: Held Thursday mornings, the weeks alternate between practical, hands-on tutorials and open drop-in "office hour" sessions for live user support.
+\item \textbf{Rubin Science Assemblies (weekly, virtual)}: Held Thursday mornings, the weeks alternate between practical, hands-on tutorials and open drop-in ``office hour'' sessions for live user support.
 \item \textbf{Rubin Data Academy (annual, virtual)}: Typically the week after the summer meeting of the American Astronomical Society, with multiple sessions a day serving global time zones. A week of interactive tutorials and networking sessions to provide an accelerated learning experience for anyone, but especially summer students starting Rubin projects. 
 \item \textbf{Rubin Community Workshop (annual, hybrid)}: Held in the middle of northern summer to bring together Rubin users and staff for a week of invited and contributed scientific presentations and discussion.
 \item \textbf{AAS Workshop}: For the first time at the winter meeting of the American Astronomical Society in 2026, Rubin staff ran a full-day Sunday workshop on DP1 and the RSP, with about 40 participants. The plan is to continue these in the future. 
@@ -115,16 +116,19 @@ Virtual events scale easily to hundreds of participants following along with pre
 
 \subsection{Issue resolution}\label{sec:issue_resolution}
 
-The Rubin Community Forum (\url{https://community.lsst.org/}) is the primary venue for user support, and can be thought of as a modern "helpdesk".
+The Rubin Community Forum (\url{https://community.lsst.org/}) is the primary venue for user support, and can be thought of as a modern ``helpdesk.''
 Anyone may create an account and post new topics in order to ask a question in the Support category (data rights are not required).
 At the time this manuscript was prepared, three alert brokers (ALeRCE, Fink, and Lasair) and the UK's independent data access center (IDAC \cite{RTN-003}) were also using the Forum to support their users.
 
-A traditional, closed help desk will not scale well to the anticipated 10000 users, but the Forum -- which is built on the Discourse platform -- enables self-help (users can search for similar questions) and crowd-sourced solutions (anyone may chime in with answers), while also providing the capabilities for Rubin staff to moderate posts and follow-up on unsolved issues.
+A traditional, closed help desk will not scale well to the anticipated 10,000 users, but the Forum -- which is built on the Discourse platform -- enables self-help (users can search for similar questions) and crowd-sourced solutions (anyone may chime in with answers), while also providing the capabilities for Rubin staff to moderate posts and follow-up on unsolved issues.
 
 Guidelines for providing user support and resolving issues that arise in the Rubin Community Forum are detailed in RTN-097\cite{RTN-097}.
 These guidelines are designed to achieve two main goals: for every topic to get a marked solution, and for every user to have a positive experience.
-One CST member serves as "Forum Watcher" every week, and they are responsible for ensuring a first response is posted within 24 hours; coordinating internal expertise when work is required to resolve an issue; and verifying that a solution is marked for every Support category topic.
+One CST member serves as ``Forum Watcher'' every week, and they are responsible for ensuring a first response is posted within 24 hours, coordinating internal expertise when work is required to resolve an issue, and verifying that a solution is marked for every Support category topic.
 The guidelines also describe the principles of effective user support as responses that are prompt, direct, validated, inclusive, and referenced.
+
+In order to mitigate the risk of some users being intimidated by the public nature of the Forum, the guidelines also prioritize kind responses, and providing reassurance that posting the Forum was the right place to post.
+Methods for confidential support are also available and instructions are provided in the Forum's expandable banner which appears at the top of every page.
 
 Such a highly engaged level of Forum moderation from Rubin staff at this early time is essential to building both the content- and crowd-base of the Forum which will, in the future years, scale in a sustainable way to thousands of users.
 
@@ -132,7 +136,7 @@ Such a highly engaged level of Forum moderation from Rubin staff at this early t
 \subsection{Accessibility}
 
 The ultimate goal is a Community Science Model and a Rubin Science Platform that are truly accessible by everyone in the global Rubin data-rights holders community.
-The following initiatives have been done in support of this goal.
+The following initiatives have been launched in support of this goal.
 
 \begin{itemize}
 \item A first external accessibility review of the RSP was led by the Instituto de Bioingenier\'{i}a at the University of Mendoza with a focus group of Blind and Low Vision (BLV) users. Their recommendations -- which are currently being implemented -- are available in Casado et al. 2026\cite{casado_2026_18262310}.
@@ -142,7 +146,7 @@ The following initiatives have been done in support of this goal.
 \end{itemize}
 
 One area of accessibility that has been raised in user feedback is that much of the documentation and materials are too advanced for undergraduate students that are just starting out with research in astronomy.
-While the expectation is that most students will have research advisors that can fill in the basics for them, the "unsupervised student" is one of the user profiles considered in RTN-002\cite{RTN-002}, so such basic materials are not entirely beyond the model's scope and are discussed in Section \ref{sec:future}.
+While the expectation is that most students will have research advisors that can fill in the basics for them, the ``unsupervised student'' is one of the user profiles considered in RTN-002\cite{RTN-002}, so such basic materials are not entirely beyond the model's scope and are discussed in Sec.~\ref{sec:future}.
 
 
 \subsection{Supporting the LSST Science Collaborations}
@@ -155,18 +159,18 @@ Rubin staff engage with the Science Collaborations by serving as Liaisons \cite{
 
 \section{Performance}\label{sec:performance}
 
-Metrics to assess the performance of the community science model -- essentially, how the model is working "in the wild" -- remain in development.
+Metrics to assess the performance of the community science model -- essentially, how the model is working ``in the wild'' -- remain in development.
 
 \begin{itemize}
 \item The number of scientific publications based on Rubin data is tracked in a SciX library\footnote{\url{https://scixplorer.org/public-libraries/QQ9rNp-QSZqea5vG6zESUQ}}\cite{RTN-113}. As of May 2026, 34 papers had been added to the library, mostly based on the DP1 data release in June 2025. As a group these papers had been cited 144 times (53 times from within the group).
 \item Attendance at live virtual events is tracked internally. The Rubin Community Workshop typically reaches maximum capacity of 250 in-person, plus an equivalent number of virtual registrants. The Rubin Data Academy attracts on order of $\sim$250 participants; and the weekly Rubin Science Assemblies attract between 15 to 80 attendees depending on the topic.
-\item The engagement, response time, and solve rates for the Rubin Community Forum since before the first data release at the end of June 2021 are shown in Figures \ref{fig:forum-performance-engagement} to \ref{fig:forum-performance-topics}.
+\item The engagement, response time, and solve rates for the Rubin Community Forum since before the first data release at the end of June 2021 are shown in Figures~\ref{fig:forum-performance-engagement} to~\ref{fig:forum-performance-topics}.
 \end{itemize}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/Forum_performance_daily_engaged_users.png}
-    \caption{Monthly average number of daily engaged users in the Rubin Community Forum over time, with data release dates marked. An "engaged user" is one who has posted or "liked" a post. The plot shows that data releases drive engagement, and that engagement has not decreased post-DP1 to pre-DP1 rates.}
+    \caption{Monthly average number of daily engaged users in the Rubin Community Forum over time, with data release dates marked. An ``engaged user'' is one who has posted or ``liked'' a post. The plot shows that data releases drive engagement, and that engagement has not decreased post-DP1 to pre-DP1 rates.}
     \label{fig:forum-performance-engagement}
 \end{figure}
 
@@ -181,7 +185,7 @@ Metrics to assess the performance of the community science model -- essentially,
     \centering
     \includegraphics[width=0.8\textwidth]{figures/Forum_performance_topics_and_solutions_1.png}
     \includegraphics[width=0.8\textwidth]{figures/Forum_performance_topics_and_solutions_2.png}
-    \caption{Monthly average number of new topics (top) and marked solutions (bottom) in the Support category of the Rubin Community Forum over time, with data release dates marked. As with the engagement metric in Figure \ref{fig:forum-performance-engagement}, new Support topics and solutions are driven by data releases. The rate of solutions can be seen to lag behind the rate of new topics, but that is expected as full issue resolution can take time.}
+    \caption{Monthly average number of new topics (top) and marked solutions (bottom) in the Support category of the Rubin Community Forum over time, with data release dates marked. As with the engagement metric in Figure~\ref{fig:forum-performance-engagement}, new Support topics and solutions are driven by data releases. The rate of solutions can be seen to lag behind the rate of new topics, but that is expected as full issue resolution can take time.}
     \label{fig:forum-performance-topics}
 \end{figure}
 
@@ -191,15 +195,18 @@ Metrics to assess the performance of the community science model -- essentially,
 To improve model performance, feedback is ingested and improvements are made to each component on a regular basis.
 The primary venue for feedback is the Rubin Users Committee \cite{RDO-051}, which produces twice-annual reports on the scientific usability of the Rubin data products, services, and tools.
 The Rubin Community Forum is also a continual source of feedback, through the questions asked and issues reported.
-Occasionally, feedback is also taken via user surveys (e.g., the DP0 Delegates were surveyed on their experience) and via focus groups, and has revealed gaps in the documentation or ideas for new science demonstration tutorials.
+Occasionally, feedback is also taken via user surveys (e.g., the DP0 Delegates were surveyed on their experience) and via focus groups.
 
+Anecdotally, some feedback has revealed gaps in the documentation or ideas for new science demonstration tutorials, which have since been filled.
+Feedback on hesitant use of the Forum led to the development of the guidelines in RTN-097\cite{RTN-097}, described in Sec.~\ref{sec:issue_resolution}, and a few user reports have been along the lines of ``once I figured out the Forum, it was easy to use.''
+The most common positive feedback is that the tutorials are extremely useful, so tutorial development continues to be prioritized.
 
 \section{Future Work}\label{sec:future}
 
 Several new additions to the community science model are currently under investigation, as listed below.
 
 \begin{itemize}
-\item Artificial Intelligence (AI): a Large Language Model augmented with Rubin-specific technical documentation and served as a "RubinBot" for users to chat with \cite{RTN-120}.
+\item Artificial Intelligence (AI): a Large Language Model augmented with Rubin-specific technical documentation and served as a ``RubinBot'' for users to chat with \cite{RTN-120}.
 \item Sonification packages to add to the RSP environment and be used in tutorials to better serve blind and low-vision astronomers.
 \item Undergraduate class modules using Rubin data to help bridge the gap for student researchers and their advisors.
 \item Short video tutorials for the Portal Aspect to include alongside the step-by-step text-based instructional tutorials.
