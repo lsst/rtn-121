@@ -1,8 +1,7 @@
 \section{Introduction}
 
 The data products from NSF-DOE Vera C. Rubin Observatory (funded by the U.S. National Science Foundation and the U.S. Department of Energy's Office of Science) and its Legacy Survey of Space and Time (LSST \cite{2019ApJ...873..111I}) are expected to be accessed and analyzed by ten thousand scientists and students worldwide.
-Supporting this large and diverse community to access the novel LSST data set requires an innovative and proactive community support model.
-# Note the shift from introducing a community _support_ model, which we then refer to as a community _science_ model. I think this will work as written. Otherwise, we could be more explicit that our model is for the support of the science done by the community, and we refer to it as a the "community science" model as a result. (This paper describes a lot more than just a helpdesk...)
+Supporting this large and diverse community to access the novel LSST data set requires an innovative and proactive model for community science.
 This paper provides an overview of the Rubin Observatory's community science model, including policies, guidelines, and workflows for documentation, tutorials, activities, user support, and issue resolution.
 An evaluation of the model's current implementation and how these components are working ``in the wild,'' with an eye towards the challenges of scaling up while maintaining inclusion and access and deriving metrics for scientific performance, are also included.
 
@@ -16,11 +15,10 @@ Only a small amount of data -- relative to the future expected datasets -- had b
 
 Early science is defined as any science enabled by Rubin for its community prior to the first annual data release, Data Release 1 \cite{RTN-011}.
 It includes early alert production, incremental template generation, and the Data Previews based on commissioning and science validation data.
-# Introduction to the alert brokers needed here...
 As of May 2026 two Data Previews have been released:
 Data Preview 0 (DP0), based on simulated LSST-like images and catalogs,
 and Data Preview 1 (DP1) \cite{10.71929/rubin/2570308}, based on observations with the LSST Commissioning Camera.
-Alerts have started streaming to brokers as of February 2026, with the release of Prompt Products and Data Preview 2 (DP2) from the LSST Camera expected later in 2026.
+Alerts have started streaming to brokers\footnote{Alert brokers are independent software systems that ingest and process astronomical alerts from the LSST and other surveys, and serve them to the scientific community.} as of February 2026, with the release of Prompt Products and Data Preview 2 (DP2) from the LSST Camera expected later in 2026.
 
 \subsection{Rubin Science Platform (RSP)}
 
@@ -128,7 +126,9 @@ Guidelines for providing user support and resolving issues that arise in the Rub
 These guidelines are designed to achieve two main goals: for every topic to get a marked solution, and for every user to have a positive experience.
 One CST member serves as ``Forum Watcher'' every week, and they are responsible for ensuring a first response is posted within 24 hours, coordinating internal expertise when work is required to resolve an issue, and verifying that a solution is marked for every Support category topic.
 The guidelines also describe the principles of effective user support as responses that are prompt, direct, validated, inclusive, and referenced.
-# Comment on the risk of some users being intimidated by teh public nature of the forum, and what the CST is doing to mitigate that risk.
+
+In order to mitigate the risk of some users being intimidated by the public nature of the Forum, the guidelines also prioritize kind responses, and providing reassurance that posting the Forum was the right place to post.
+Methods for confidential support are also available and instructions are provided in the Forum's expandable banner which appears at the top of every page.
 
 Such a highly engaged level of Forum moderation from Rubin staff at this early time is essential to building both the content- and crowd-base of the Forum which will, in the future years, scale in a sustainable way to thousands of users.
 
@@ -185,7 +185,7 @@ Metrics to assess the performance of the community science model -- essentially,
     \centering
     \includegraphics[width=0.8\textwidth]{figures/Forum_performance_topics_and_solutions_1.png}
     \includegraphics[width=0.8\textwidth]{figures/Forum_performance_topics_and_solutions_2.png}
-    \caption{Monthly average number of new topics (top) and marked solutions (bottom) in the Support category of the Rubin Community Forum over time, with data release dates marked. As with the engagement metric in Figure \ref{fig:forum-performance-engagement}, new Support topics and solutions are driven by data releases. The rate of solutions can be seen to lag behind the rate of new topics, but that is expected as full issue resolution can take time.}
+    \caption{Monthly average number of new topics (top) and marked solutions (bottom) in the Support category of the Rubin Community Forum over time, with data release dates marked. As with the engagement metric in Figure~\ref{fig:forum-performance-engagement}, new Support topics and solutions are driven by data releases. The rate of solutions can be seen to lag behind the rate of new topics, but that is expected as full issue resolution can take time.}
     \label{fig:forum-performance-topics}
 \end{figure}
 
@@ -195,8 +195,11 @@ Metrics to assess the performance of the community science model -- essentially,
 To improve model performance, feedback is ingested and improvements are made to each component on a regular basis.
 The primary venue for feedback is the Rubin Users Committee \cite{RDO-051}, which produces twice-annual reports on the scientific usability of the Rubin data products, services, and tools.
 The Rubin Community Forum is also a continual source of feedback, through the questions asked and issues reported.
-Occasionally, feedback is also taken via user surveys (e.g., the DP0 Delegates were surveyed on their experience) and via focus groups, and has revealed gaps in the documentation or ideas for new science demonstration tutorials.
-# Include a summary of feedback recieved to date. To what extent does the feedback show that the model is working? 
+Occasionally, feedback is also taken via user surveys (e.g., the DP0 Delegates were surveyed on their experience) and via focus groups.
+
+Anecdotally, some feedback has revealed gaps in the documentation or ideas for new science demonstration tutorials, which have since been filled.
+Feedback on hesitant use of the Forum led to the development of the guidelines in RTN-097\cite{RTN-097}, described in Sec.~\ref{sec:issue_resolution}, and a few user reports have been along the lines of ``once I figured out the Forum, it was easy to use.''
+The most common positive feedback is that the tutorials are extremely useful, so tutorial development continues to be prioritized.
 
 \section{Future Work}\label{sec:future}
 
